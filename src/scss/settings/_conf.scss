@@ -1,0 +1,53 @@
+//--------
+//Setting space
+//--------
+$space: 20px !default;
+$double--space: $space * 2 !default;
+$triple--space: $space * 3 !default;
+$quad--space: $space * 4 !default;
+$half--space: $space / 2 !default;
+$quarter--space: $space / 4 !default;
+$none--space : 0;
+
+//--------
+// Breakpoints
+//--------
+$phone--start:       320px!default;
+$palm--start:        500px!default;
+$mid--start:         960px!default;
+$lap--start:        1224px!default;
+$desk--wide--start:   1824px!default;
+
+//--------
+// Colors
+//--------
+$header--bg: #123a78;
+$main--bg: #f2f2f2;
+$containers--bg: #ffffff;
+$title: #036fc7;
+$price: #dd6100;
+$icons: #3c3c3c;
+$input: $icons;
+$border--input: #ddd;
+$star: #ffb200;
+$text: #929292;
+$border--dashed: #d4cdcd;
+$main--btn--bg: #00256e;
+$main--btn--bg--hover: #0342c0;
+$main--btn--text: #fdfeff;
+$main--btn--border: #000;
+$box-shadow: #ccc;
+
+//--------
+// Font Weight
+//--------
+$weight--bold: 600;
+$weight--normal: 500;
+$weight--lighter: 300;
+$weight--thin: 100;
+
+//--------
+// Font Weight
+//--------
+$radius--default: 2px;
+$radius--big: 5px;

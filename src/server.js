@@ -11,6 +11,7 @@ import createStore, { initializeSession } from "./store";
 
 const app = express();
 
+app.use( "/static", express.static( "public" ) );
 app.use( express.static( path.resolve( __dirname, "../dist" ) ) );
 
 app.get( "/*", ( req, res ) => {
@@ -52,6 +53,8 @@ function htmlTemplate( reactDom, reduxState ) {
         <head>
             <meta charset="utf-8">
             <title>React SSR</title>
+            <link  rel="stylesheet" href="/static/css/main.css">
+
         </head>
         
         <body>

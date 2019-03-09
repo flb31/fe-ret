@@ -5,11 +5,13 @@ import {
 
 export default [
     {
+        id: 1,
         path: "/",
         component: Home,
         exact: true,
     },
     {
+        id: 2,
         component: NotFound,
     },
 ];
