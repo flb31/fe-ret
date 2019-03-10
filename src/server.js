@@ -55,6 +55,7 @@ function htmlTemplate( reactDom, reduxState ) {
             <title>React SSR</title>
             <link  rel="stylesheet" href="/static/css/main.css">
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         </head>
         
         <body>

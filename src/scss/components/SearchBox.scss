@@ -1,0 +1,22 @@
+@import '../settings/conf';
+
+.searchbox {
+    position: relative;
+    width: 100%;
+    
+    &__icon {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        color: $gray;
+    }
+
+    &__input {
+        width: inherit;
+        padding-left: 30px;
+        color: $gray;
+        height: 45px;
+        border-radius: 4px;
+        border: none;
+    }
+}

@@ -6564,13 +6564,15 @@ body {
 
 .header-search {
   background-color: #225794;
-  display: flex;
-  flex-direction: column;
   padding-top: 20px;
-  align-items: center;
-  justify-content: space-between;
-  height: 200px;
   font-weight: 300; }
+  .header-search .wrapper {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px; }
   .header-search__selectors {
     display: flex;
     align-items: center;
@@ -6650,3 +6652,19 @@ body {
       border-top-color: #fff; }
   .dropdown--show .dropdown__options {
     display: block; }
+
+.searchbox {
+  position: relative;
+  width: 100%; }
+  .searchbox__icon {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #717878; }
+  .searchbox__input {
+    width: inherit;
+    padding-left: 30px;
+    color: #717878;
+    height: 45px;
+    border-radius: 4px;
+    border: none; }

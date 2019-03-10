@@ -4,3 +4,4 @@ export { default as Header } from "./Header";
 export { default as HeaderSearch } from "./HeaderSearch";
 export { default as Layout } from "./Layout";
 export { default as MenuItem } from "./MenuItem";
+export { default as SearchBox } from "./SearchBox";
