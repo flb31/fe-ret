@@ -18,8 +18,14 @@
 @import './layout/general';
 
 /// --------
-/// Components
+/// Containers
 /// --------
 @import './components/Header';
+@import './components/HeaderSearch';
+
+/// --------
+/// Components
+/// --------
 @import './components/Menu';
 @import './components/Button';
+@import './components/Dropdown';

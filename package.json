@@ -7,8 +7,7 @@
     "build": "NODE_ENV=production webpack --progress",
     "dev": "node-sass src/scss/main.scss public/css/main.css --watch & webpack --watch --progress  & nodemon index.js",
     "linter": "eslint src",
-    "bundlesize": "bundlesize",
-    "precommit": "eslint src --quiet"
+    "bundlesize": "bundlesize"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",

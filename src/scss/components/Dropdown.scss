@@ -1,0 +1,68 @@
+@import '../settings/conf';
+
+.dropdown {
+    width: auto;
+    background-color: transparent;
+    border: 1px solid $gray;
+    font-size: 12px;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    $root: &;
+
+    &:after {
+        content: '';
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $gray;
+        margin-left: $quarter--space;
+        display: block;
+    }
+
+    &__options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+    }
+
+    &__item {
+        padding: 5px;
+        background-color: $white;
+        color: $gray;
+        transition: ease background-color .4s;
+
+        &:hover {
+            background-color: $gray;
+            color: $white;
+        }
+    }
+
+    &--big {
+        padding: 10px;
+        font-size: 20px;
+
+        &:after {
+            border-width: 7px;
+        }
+    }
+
+    &--white {
+        color: $white;
+        border-color: $white;
+
+        &:after {
+            border-top-color: $white;
+        }
+    }
+
+    &--show {
+        #{$root}__options {
+            display: block;
+        }
+    }
+}

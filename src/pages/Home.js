@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../store";
-import Header from "../components/Header";
+import {
+    Header,
+    HeaderSearch,
+} from "../components";
 
 class Home extends React.Component {
     componentDidMount( ) {
@@ -16,6 +19,8 @@ class Home extends React.Component {
         return (
             <div>
                 <Header />
+
+                <HeaderSearch />
                 <ul>
                     { circuits.map( ( { circuitId, circuitName, Location } ) => (
                         <li key={ circuitId } >{ circuitName } - { Location.locality }, { Location.country }</li>
