@@ -76,7 +76,7 @@ class Dowpdown extends Component {
 
 Dowpdown.propTypes = {
     title: PropTypes.string.isRequired,
-    options: React.PropTypes.arrayOf( React.PropTypes.string ).isRequired,
+    options: PropTypes.array.isRequired,
 };
 
 export default Dowpdown;
