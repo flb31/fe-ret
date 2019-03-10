@@ -6592,6 +6592,24 @@ body {
   .filter-container__icon {
     color: #717878; }
 
+.results {
+  background-color: #fff;
+  padding: 10px; }
+  .results__sorts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #484a4a;
+    font-size: 14px; }
+    .results__sorts span {
+      font-weight: 300; }
+  .results__sort {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 300;
+    color: #717878; }
+
 .menu__item {
   margin-left: 20px;
   color: #717878;
@@ -6624,14 +6642,15 @@ body {
 .dropdown {
   width: auto;
   background-color: transparent;
-  border: 1px solid #717878;
+  border: 1px solid rgba(113, 120, 120, 0.4);
   font-size: 12px;
-  padding: 5px;
-  margin: 0 auto;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 3px;
+  color: #717878; }
   .dropdown:after {
     content: '';
     border-left: 5px solid transparent;

@@ -74,9 +74,14 @@ class Dropdown extends Component {
     }
 }
 
+Dropdown.defaultProps = {
+    className: "",
+};
+
 Dropdown.propTypes = {
     title: PropTypes.string.isRequired,
     options: PropTypes.array.isRequired,
+    className: PropTypes.string,
 };
 
 export default Dropdown;

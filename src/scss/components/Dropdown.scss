@@ -3,15 +3,16 @@
 .dropdown {
     width: auto;
     background-color: transparent;
-    border: 1px solid $gray;
+    border: 1px solid rgba($gray, 0.4);
     font-size: 12px;
-    padding: 5px;
-    margin: 0 auto;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     position: relative;
     cursor: pointer;
     $root: &;
+    border-radius: 3px;
+    color: $gray;
 
     &:after {
         content: '';

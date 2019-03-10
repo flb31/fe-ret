@@ -1,0 +1,26 @@
+@import '../settings/conf';
+
+.results {
+    background-color: $white;
+    padding: $half--space;
+
+    &__sorts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $dark--gray;
+        font-size: 14px;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    &__sort {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        font-weight: 300;
+        color: $gray;
+    }
+}

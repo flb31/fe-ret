@@ -5,6 +5,7 @@ import {
     Header,
     HeaderSearch,
     FilterContainer,
+    Dropdown,
 } from "../components";
 
 class Home extends React.Component {
@@ -16,6 +17,13 @@ class Home extends React.Component {
 
     render( ) {
         const { circuits } = this.props;
+
+        const options = [
+            { value: "", title: "Relevance" },
+            { value: "", title: "Title" },
+            { value: "", title: "Min price first" },
+            { value: "", title: "Max price first" },
+        ]
 
         return (
             <div>
@@ -29,7 +37,23 @@ class Home extends React.Component {
                             <div className="grid__item one-third">
                                 <FilterContainer />
                             </div>
-                            <div className="grid__item two-thirds">Cards</div>
+                            <div className="grid__item two-thirds">
+                                <div className="results">
+                                    <div className="results__sorts grid">
+                                        <div className="grid__item one-half">
+                                            Page 1 <span>of</span> 1000 results
+                                        </div>
+
+                                        <div className="results__sort">
+                                            Sorted by:
+                                            <Dropdown
+                                                options={ options }
+                                                title="Relevance"
+                                                className="m-l" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
