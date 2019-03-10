@@ -6551,7 +6551,8 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  left: 0; }
+  left: 0;
+  z-index: 100; }
   .header__wrapper {
     display: flex;
     align-items: center;
@@ -6631,7 +6632,8 @@ body {
     position: absolute;
     top: 100%;
     width: 100%;
-    left: 0; }
+    left: 0;
+    z-index: 10; }
   .dropdown__item {
     padding: 5px;
     background-color: #fff;
@@ -6668,3 +6670,22 @@ body {
     height: 45px;
     border-radius: 4px;
     border: none; }
+
+.tabs {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px; }
+  .tabs__item {
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-left: 20px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 300px; }
+    .tabs__item:first-child {
+      margin-left: 0; }
+    .tabs__item--active {
+      opacity: 1;
+      cursor: default;
+      border-bottom: 3px solid #16c482; }

@@ -1,0 +1,27 @@
+@import '../settings/conf';
+
+.tabs {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: $half--space;
+
+    &__item {
+        color: $white;
+        opacity: 0.8;
+        cursor: pointer;
+        margin-left: $space;
+        padding-bottom: $half--space - 2;
+        font-size: 14px;
+        font-weight: 300px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &--active {
+            opacity: 1;
+            cursor: default;
+            border-bottom: 3px solid $green;
+        }
+    }
+}

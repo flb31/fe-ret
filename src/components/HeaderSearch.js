@@ -26,7 +26,11 @@ const HeaderSearch = () => { // eslint-disable-line arrow-body-style
 
                 <SearchBox placeholder="Search courses and providers" />
 
-                <div>TABS</div>
+                {/* Tabs control container */}
+                <nav className="tabs">
+                    <a className="tabs__item tabs__item--active">Courses</a>
+                    <a className="tabs__item">Providers</a>
+                </nav>
             </div>
         </header>
     );
