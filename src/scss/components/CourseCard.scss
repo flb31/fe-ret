@@ -1,0 +1,88 @@
+@import '../settings/conf';
+@import '../settings/mixins';
+
+.course-card {
+    border: 1px solid rgba($gray, .2);
+    padding: 30px $space;
+    display: flex;
+    margin-top: $space;
+    border-radius: 2px;
+    justify-content: space-between;
+
+    &__image {
+        @include ratio('&', '16:9');
+        max-width: 180px;
+    }
+
+    &__info {
+        &__title {
+            color: $dark--gray;
+            font-size: 15px;
+        }
+
+        &__tag {
+            border: $tag 1px solid;
+            color: $tag;
+            font-size: 9px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: $half--space;
+            padding: 0 3px;
+            font-weight: 100;
+        }
+
+        &__description {
+            text-transform: uppercase;
+            margin-bottom: $space;
+            font-weight: 300;
+            color: $gray;
+            font-size: 13px;
+        }
+
+        &__icons {
+            display: flex;
+            color: $gray;
+            font-size: 12px;
+            font-weight: 300;
+            align-items: center;
+
+            > * {
+                margin-left: $quarter--space;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            i {
+                color: $gray;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__more-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &__price {
+            font-weight: 600;
+            font-size: 20px;
+            color: $dark--gray;
+        }
+
+        &__share {
+            border-radius: 3px;
+            border: 1px solid rgba($gray, .2);
+            width: 50px;
+            height: 40px;
+
+            i {
+                font-size: 16px;
+                color: $gray;
+            }
+        }
+    }
+}

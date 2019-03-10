@@ -6,6 +6,7 @@ import {
     HeaderSearch,
     FilterContainer,
     Dropdown,
+    CourseCard,
 } from "../components";
 
 class Home extends React.Component {
@@ -52,6 +53,8 @@ class Home extends React.Component {
                                                 className="m-l" />
                                         </div>
                                     </div>
+
+                                    <CourseCard course={null} />
                                 </div>
                             </div>
                         </div>

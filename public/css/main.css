@@ -6784,3 +6784,77 @@ body {
     font-size: 12px;
     cursor: pointer;
     padding-left: 20px; }
+
+.course-card {
+  border: 1px solid rgba(113, 120, 120, 0.2);
+  padding: 30px 20px;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 2px;
+  justify-content: space-between; }
+  .course-card__image {
+    max-width: 180px; }
+    .course-card__image {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden; }
+      .course-card__image:before {
+        content: '';
+        display: block;
+        padding-top: 56.25%; }
+    .course-card__image > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%; }
+  .course-card__info__title {
+    color: #484a4a;
+    font-size: 15px; }
+  .course-card__info__tag {
+    border: #55a568 1px solid;
+    color: #55a568;
+    font-size: 9px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0 3px;
+    font-weight: 100; }
+  .course-card__info__description {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: #717878;
+    font-size: 13px; }
+  .course-card__info__icons {
+    display: flex;
+    color: #717878;
+    font-size: 12px;
+    font-weight: 300;
+    align-items: center; }
+    .course-card__info__icons > * {
+      margin-left: 5px; }
+      .course-card__info__icons > *:first-child {
+        margin-left: 0; }
+    .course-card__info__icons i {
+      color: #717878;
+      font-size: 12px; }
+  .course-card__more-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .course-card__more-info__price {
+      font-weight: 600;
+      font-size: 20px;
+      color: #484a4a; }
+    .course-card__more-info__share {
+      border-radius: 3px;
+      border: 1px solid rgba(113, 120, 120, 0.2);
+      width: 50px;
+      height: 40px; }
+      .course-card__more-info__share i {
+        font-size: 16px;
+        color: #717878; }
