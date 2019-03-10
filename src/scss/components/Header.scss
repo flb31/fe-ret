@@ -1,0 +1,25 @@
+@import '../settings/conf';
+
+.header {
+    background-color: $white;
+    height: $height--menu;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+    }
+
+    &__figure {
+        margin: 0 $double--space 0 0;
+    }
+
+    &__buttons {
+        margin-left: $quad--space;
+    }
+}

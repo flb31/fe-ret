@@ -2,24 +2,12 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import routes from "../routes";
 
-class Layout extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            title: "Welcome to React SSR!",
-        };
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>{ this.state.title }</h1>
-                <Switch>
-                    { routes.map( route => <Route key={ route.id } { ...route } /> ) }
-                </Switch>
-            </div>
-        );
-    }
-}
+const Layout = () => { // eslint-disable-line arrow-body-style
+    return (
+        <Switch>
+            { routes.map( route => <Route key={ route.id } { ...route } /> ) }
+        </Switch>
+    );
+};
 
 export default Layout;

@@ -1,0 +1,26 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding-top: $height--menu;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    section,
+    header {
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+

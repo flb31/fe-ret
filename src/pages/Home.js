@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../store";
+import Header from "../components/Header";
 
 class Home extends React.Component {
     componentDidMount( ) {
@@ -14,7 +15,7 @@ class Home extends React.Component {
 
         return (
             <div>
-                <h2>F1 2018 Season Calendar</h2>
+                <Header />
                 <ul>
                     { circuits.map( ( { circuitId, circuitName, Location } ) => (
                         <li key={ circuitId } >{ circuitName } - { Location.locality }, { Location.country }</li>

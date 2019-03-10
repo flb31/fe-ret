@@ -1,0 +1,22 @@
+@import '../settings/conf';
+
+.button {
+    padding: 10px;
+    color: $gray;
+    background-color: $white;
+    border: 1px solid $gray;
+    width: auto;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .4s opacity ease;
+
+    &--primary {
+        background-color: $green;
+        color: $white;
+        border: 1px solid $green;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}

@@ -11,3 +11,15 @@
 @import 'settings/displays';
 @import 'settings/spaces';
 @import 'settings/helpers';
+
+/// --------
+/// Layout
+/// --------
+@import './layout/general';
+
+/// --------
+/// Components
+/// --------
+@import './components/Header';
+@import './components/Menu';
+@import './components/Button';

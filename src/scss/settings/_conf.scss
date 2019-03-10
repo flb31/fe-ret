@@ -21,33 +21,19 @@ $desk--wide--start:   1824px!default;
 //--------
 // Colors
 //--------
-$header--bg: #123a78;
-$main--bg: #f2f2f2;
-$containers--bg: #ffffff;
-$title: #036fc7;
-$price: #dd6100;
-$icons: #3c3c3c;
-$input: $icons;
-$border--input: #ddd;
-$star: #ffb200;
-$text: #929292;
-$border--dashed: #d4cdcd;
-$main--btn--bg: #00256e;
-$main--btn--bg--hover: #0342c0;
-$main--btn--text: #fdfeff;
-$main--btn--border: #000;
-$box-shadow: #ccc;
+$white: #fff !default;
+$gray: #717878 !default;
+$green: #16c482 !default;
 
 //--------
 // Font Weight
 //--------
-$weight--bold: 600;
-$weight--normal: 500;
-$weight--lighter: 300;
-$weight--thin: 100;
+$weight--bold: 600 !default;
+$weight--normal: 500 !default;
+$weight--lighter: 300 !default;
+$weight--thin: 100 !default;
 
 //--------
-// Font Weight
+// Others
 //--------
-$radius--default: 2px;
-$radius--big: 5px;
+$height--menu: 80px !default;
