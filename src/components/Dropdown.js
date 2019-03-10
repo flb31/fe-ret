@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-class Dowpdown extends Component {
+class Dropdown extends Component {
     constructor( props ) {
         super( props );
         this.state = {
@@ -74,9 +74,9 @@ class Dowpdown extends Component {
     }
 }
 
-Dowpdown.propTypes = {
+Dropdown.propTypes = {
     title: PropTypes.string.isRequired,
     options: PropTypes.array.isRequired,
 };
 
-export default Dowpdown;
+export default Dropdown;

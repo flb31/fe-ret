@@ -12,15 +12,11 @@
     &__wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         height: inherit;
     }
 
     &__figure {
-        margin: 0 $double--space 0 0;
-    }
-
-    &__buttons {
-        margin-left: $quad--space;
+        margin: 0 0;
     }
 }

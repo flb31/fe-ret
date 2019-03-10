@@ -4,6 +4,7 @@ html {
 
 body {
     padding-top: $height--menu;
+    background-color: $background-body;
 
     *,
     *:before,
@@ -11,10 +12,16 @@ body {
         box-sizing: border-box;
     }
 
-    section,
     header {
         .wrapper {
             max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    section {
+        .wrapper {
+            max-width: 1000px;
             margin: 0 auto;
         }
     }

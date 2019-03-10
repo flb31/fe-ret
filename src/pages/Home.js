@@ -4,6 +4,7 @@ import { fetchData } from "../store";
 import {
     Header,
     HeaderSearch,
+    FilterContainer,
 } from "../components";
 
 class Home extends React.Component {
@@ -21,11 +22,17 @@ class Home extends React.Component {
                 <Header />
 
                 <HeaderSearch />
-                <ul>
-                    { circuits.map( ( { circuitId, circuitName, Location } ) => (
-                        <li key={ circuitId } >{ circuitName } - { Location.locality }, { Location.country }</li>
-                    ) ) }
-                </ul>
+
+                <section className="m-double-t">
+                    <div className="wrapper">
+                        <div className="grid overflow-visible">
+                            <div className="grid__item one-third">
+                                <FilterContainer />
+                            </div>
+                            <div className="grid__item two-thirds">Cards</div>
+                        </div>
+                    </div>
+                </section>
             </div>
         );
     }

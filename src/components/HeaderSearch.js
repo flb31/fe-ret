@@ -1,5 +1,5 @@
 import React from "react";
-import Dowpdown from "./Dropdown";
+import Dropdown from "./Dropdown";
 import SearchBox from "./SearchBox";
 
 const HeaderSearch = () => { // eslint-disable-line arrow-body-style
@@ -12,12 +12,12 @@ const HeaderSearch = () => { // eslint-disable-line arrow-body-style
         <header className="header-search">
             <div className="wrapper">
                 <div className="header-search__selectors"> Find CE for a
-                    <Dowpdown
+                    <Dropdown
                         options={ options }
                         className="dropdown--big dropdown--white m-l"
                         title="Florida"
                     />
-                    <Dowpdown
+                    <Dropdown
                         options={ options }
                         className="dropdown--big dropdown--white m-l"
                         title="Medical Doctor"
