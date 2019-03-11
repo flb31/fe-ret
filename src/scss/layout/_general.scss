@@ -1,10 +1,15 @@
+@import '../settings/mesaures';
+
 html {
     font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    padding-top: $height--menu;
     background-color: $background-body;
+
+    @media #{$gt--mid} {
+        padding-top: $height--menu;
+    }
 
     *,
     *:before,

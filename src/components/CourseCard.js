@@ -13,7 +13,7 @@ class CourseCard extends Component {
                         alt="Course Title"/>
                 </div>
                 
-                <div className="course-card__info p-half-l p-triple-r">
+                <div className="course-card__info mid--p-half-l mid--p-triple-r">
                     <div className="course-card__info__title">
                         Preventing Medical Errors
                     </div>
@@ -34,7 +34,7 @@ class CourseCard extends Component {
                     </div>
                 </div>
 
-                <div className="course-card__more-info">
+                <div className="course-card__more-info p-t mid--p-t-none">
                     <div className="course-card__more-info__price">$50,00</div>
 
                     <button className="course-card__more-info__share">

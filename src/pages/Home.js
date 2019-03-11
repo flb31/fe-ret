@@ -32,15 +32,15 @@ class Home extends React.Component {
 
                 <HeaderSearch />
 
-                <section className="m-double-t">
+                <section className="p-b">
                     <div className="wrapper">
-                        <div className="grid overflow-visible">
-                            <div className="grid__item one-third">
+                        <div className="grid">
+                            <div className="grid__item one-whole mid--one-third p-r mid--p-r-none m-double-t">
                                 <FilterContainer />
                             </div>
-                            <div className="grid__item two-thirds">
+                            <div className="grid__item one-whole mid--two-thirds p-r mid--p-r-none m-double-t">
                                 <div className="results">
-                                    <div className="results__sorts grid">
+                                    <div className="results__sorts grid overflow-visible">
                                         <div className="grid__item one-half">
                                             Page 1 <span>of</span> 1000 results
                                         </div>

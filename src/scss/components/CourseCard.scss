@@ -8,6 +8,11 @@
     margin-top: $space;
     border-radius: 2px;
     justify-content: space-between;
+    flex-direction: column;
+
+    @media #{$gt--mid} {
+        flex-direction: row;
+    }
 
     &__image {
         @include ratio('&', '16:9');
@@ -15,6 +20,12 @@
     }
 
     &__info {
+        text-align: center;
+        
+        @media #{$gt--mid} {
+            text-align: left;
+        }
+
         &__title {
             color: $dark--gray;
             font-size: 15px;
@@ -45,6 +56,11 @@
             font-size: 12px;
             font-weight: 300;
             align-items: center;
+            flex-direction: column;
+        
+            @media #{$gt--mid} {
+                flex-direction: row;
+            }
 
             > * {
                 margin-left: $quarter--space;
@@ -65,7 +81,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        
+        @media #{$gt--mid} {
+            align-items: flex-end;
+        }
 
         &__price {
             font-weight: 600;

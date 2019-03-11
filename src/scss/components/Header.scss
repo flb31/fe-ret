@@ -1,22 +1,41 @@
 @import '../settings/conf';
+@import '../settings/mesaures';
 
 .header {
     background-color: $white;
-    height: $height--menu;
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 100;
+    padding: $space;
+
+    @media #{$gt--mid} {
+        height: $height--menu;
+        padding: 0;
+        position: fixed;
+    }
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: inherit;
+        flex-wrap: wrap;
     }
 
     &__figure {
-        margin: 0 0;
+        margin: 0 auto;
+
+        @media #{$gt--mid} {
+            margin: 0;
+        }
+    }
+
+    &__buttons {
+        margin: 0 auto;
+
+        @media #{$gt--mid} {
+            margin: 0;
+        }
     }
 }

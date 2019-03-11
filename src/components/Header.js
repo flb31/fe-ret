@@ -17,7 +17,7 @@ const Header = () => { // eslint-disable-line arrow-body-style
                     <MenuItem title="Support" href="#" />
                 </nav>
 
-                <div className="header__buttons">
+                <div className="header__buttons m-t mid--m-t-none">
                     <Button>Sign In</Button>
                     <Button className="button--primary m-l">7 days trial</Button>
                 </div>

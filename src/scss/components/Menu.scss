@@ -1,6 +1,15 @@
 @import '../settings/conf';
+@import '../settings/mesaures';
 
 .menu {
+    text-align: center;
+    width: 100%;
+
+    @media #{$gt--mid} {
+        text-align: left;
+        width: auto;
+    }
+    
     &__item {
         margin-left: $space;
         color: $gray;

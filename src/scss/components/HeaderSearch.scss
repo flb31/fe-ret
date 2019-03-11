@@ -11,7 +11,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height: 200px;
+        min-height: 200px;
     }
 
     &__selectors {
@@ -19,5 +19,13 @@
         align-items: center;
         color: $white;
         font-size: 20px;
+        flex-direction: column;
+        height: 180px;
+        justify-content: space-around;
+
+        @media #{$gt--mid} {
+            flex-direction: row;
+            height: auto;
+        }
     }
 }
