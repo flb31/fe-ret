@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 
 const CourseCard  = props => {
     
-    const { name, status, provider, featuredBanner } = props.course;
+    const { name, status, provider, featuredBanner,  } = props.course;
+
+    const featuredRender = props.featured ? <div className="course-card__info__tag">Featured</div> : null
     
     return (
         <article className="course-card">
@@ -18,9 +20,7 @@ const CourseCard  = props => {
                     { name }
                 </div>
 
-                <div className="course-card__info__tag">
-                    { status }
-                </div>
+                { featuredRender }
 
                 <div className="course-card__info__description">
                     { provider.name }
@@ -45,8 +45,13 @@ const CourseCard  = props => {
     );
 };
 
+CourseCard.defaultProps = {
+    featured: false,
+}
+
 CourseCard.PropTypes = {
-    course: PropTypes.object.isRequired
+    course: PropTypes.object.isRequired,
+    featured: PropTypes.bool,
 };
 
 
