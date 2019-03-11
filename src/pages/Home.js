@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchData } from "../store";
+import { fetchCourses } from "../redux/action";
 import {
     Header,
     HeaderSearch,
@@ -11,20 +11,20 @@ import {
 
 class Home extends React.Component {
     componentDidMount( ) {
-        if ( this.props.circuits.length <= 0 ) {
-            this.props.fetchData( );
+        if ( this.props.courses.length <= 0 ) {
+            this.props.fetchCourses( );
         }
     }
 
     render( ) {
-        const { circuits } = this.props;
+        const { courses } = this.props;
 
         const options = [
             { value: "", title: "Relevance" },
             { value: "", title: "Title" },
             { value: "", title: "Min price first" },
             { value: "", title: "Max price first" },
-        ]
+        ];
 
         return (
             <div>
@@ -53,8 +53,7 @@ class Home extends React.Component {
                                                 className="m-l" />
                                         </div>
                                     </div>
-
-                                    <CourseCard course={null} />
+                                    { courses.map ( course => <CourseCard key={ course.id } course={ course.coursePublication.course } /> ) }
                                 </div>
                             </div>
                         </div>
@@ -64,14 +63,14 @@ class Home extends React.Component {
         );
     }
 }
-Home.serverFetch = fetchData; // static declaration of data requirements
+Home.serverFetch = fetchCourses; // static declaration of data requirements
 
 const mapStateToProps = ( state ) => ( {
-    circuits: state.data,
+    courses: state.courses,
 } );
 
 const mapDispatchToProps = {
-    fetchData,
+    fetchCourses,
 };
 
 export default connect( mapStateToProps, mapDispatchToProps )( Home );

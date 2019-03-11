@@ -7,7 +7,7 @@ import { StaticRouter, matchPath } from "react-router-dom";
 import { Provider as ReduxProvider } from "react-redux";
 import routes from "./routes";
 import Layout from "./components/Layout";
-import createStore, { initializeSession } from "./store";
+import createStore, { initializeSession } from "./redux/store";
 
 const app = express();
 
@@ -17,8 +17,6 @@ app.use( express.static( path.resolve( __dirname, "../dist" ) ) );
 app.get( "/*", ( req, res ) => {
     const context = { };
     const store = createStore( );
-
-    store.dispatch( initializeSession( ) );
 
     const dataRequirements =
         routes
