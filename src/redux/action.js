@@ -13,11 +13,14 @@ const storeData = ( type, data ) => ( {
     payload: data,
 } );
 
-
 export const fetchFeaturedCourses = ( ) => ( dispatch ) => {
     fetchFeatured( )
     .then( res => dispatch( storeData( COURSES_FEATURED_SUCCESS, res ) ) )
     .catch( error => dispatch( storeData( COURSES_FEATURED_ERROR, error ) ) );
 }
-    
 
+export const fetchNormalCourses = ( ) => ( dispatch ) => {
+    fetchCourses( 10, 1 )
+    .then( res => dispatch( storeData( COURSES_NORMAL_SUCCESS, res.items ) ) )
+    .catch( error => dispatch( storeData( COURSES_NORMAL_ERROR, error ) ) );
+}

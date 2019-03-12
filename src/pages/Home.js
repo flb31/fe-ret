@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchFeaturedCourses } from "../redux/action";
+import { fetchFeaturedCourses, fetchNormalCourses } from "../redux/action";
 import {
     Header,
     HeaderSearch,
@@ -13,6 +13,7 @@ class Home extends React.Component {
     componentDidMount( ) {
         if ( this.props.courses.length <= 0 ) {
             this.props.fetchFeaturedCourses( );
+            this.props.fetchNormalCourses( );
         }
     }
 
@@ -57,7 +58,7 @@ class Home extends React.Component {
                                         course => <CourseCard 
                                                         featured={ course.featured }
                                                         key={ course.id }
-                                                        course={ course.coursePublication.course }
+                                                        course={ course.course }
                                                         /> 
                                         )
                                     }
@@ -71,7 +72,7 @@ class Home extends React.Component {
     }
 }
 
-Home.serverFetch = fetchFeaturedCourses; // static declaration of data requirements
+// Home.serverFetch = fetchNormalCourses; // static declaration of data requirements
 
 const mapStateToProps = ( state ) => ( {
     courses: state.courses,
@@ -79,6 +80,7 @@ const mapStateToProps = ( state ) => ( {
 
 const mapDispatchToProps = {
     fetchFeaturedCourses,
+    fetchNormalCourses
 };
 
 export default connect( mapStateToProps, mapDispatchToProps )( Home );

@@ -7,13 +7,19 @@ const CourseCard  = props => {
 
     const featuredRender = props.featured ? <div className="course-card__info__tag">Featured</div> : null
     
-    return (
-        <article className="course-card">
+    const renderImage = (name, featuredBanner) => {
+        return (
             <div className="course-card__image">
                 <img
                     src={`https://storage.cebroker.com/CEBroker/${featuredBanner}`}
                     alt={name} />
             </div>
+        );
+    }
+
+    return (
+        <article className="course-card">
+            { props.featured ? renderImage(name, featuredBanner) : null }
             
             <div className="course-card__info mid--p-half-l mid--p-triple-r">
                 <div className="course-card__info__title">
