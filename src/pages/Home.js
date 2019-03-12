@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchCoursesFeatured } from "../redux/action";
+import { fetchFeaturedCourses } from "../redux/action";
 import {
     Header,
     HeaderSearch,
@@ -12,7 +12,7 @@ import {
 class Home extends React.Component {
     componentDidMount( ) {
         if ( this.props.courses.length <= 0 ) {
-            this.props.fetchCoursesFeatured( );
+            this.props.fetchFeaturedCourses( );
         }
     }
 
@@ -71,14 +71,14 @@ class Home extends React.Component {
     }
 }
 
-Home.serverFetch = fetchCoursesFeatured; // static declaration of data requirements
+Home.serverFetch = fetchFeaturedCourses; // static declaration of data requirements
 
 const mapStateToProps = ( state ) => ( {
     courses: state.courses,
 } );
 
 const mapDispatchToProps = {
-    fetchCoursesFeatured,
+    fetchFeaturedCourses,
 };
 
 export default connect( mapStateToProps, mapDispatchToProps )( Home );
