@@ -7,6 +7,7 @@ import {
     FilterContainer,
     Dropdown,
     CourseCard,
+    Loading,
 } from "../components";
 
 class Home extends React.Component {
@@ -54,19 +55,21 @@ class Home extends React.Component {
                                                 className="m-l" />
                                         </div>
                                     </div>
-                                    { courses.map ( 
+                                    { courses.length ? courses.map ( 
                                         course => <CourseCard 
                                                         featured={ course.featured }
                                                         key={ course.id }
                                                         course={ course.course }
                                                         /> 
                                         )
+                                        : <h3>No results</h3>
                                     }
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <Loading />
             </div>
         );
     }

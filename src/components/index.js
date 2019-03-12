@@ -6,6 +6,7 @@ export { default as MenuItem } from "./MenuItem";
 export { default as SearchBox } from "./SearchBox";
 export { default as Filter } from "./Filter";
 export { default as CourseCard } from "./CourseCard";
+export { default as Loading } from "./Loading";
 
 // Containers
 export { default as Header } from "./Header";

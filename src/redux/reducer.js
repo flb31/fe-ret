@@ -5,13 +5,16 @@ import {
     COURSES_NORMAL_FETCH,
     COURSES_NORMAL_SUCCESS,
     COURSES_NORMAL_ERROR,
+    COURSES_SEARCH_FETCH,
+    COURSES_SEARCH_SUCCESS,
+    COURSES_SEARCH_ERROR,
 } from './action';
 
 const coursesReducer = ( state = [ ], action ) => {
 
     switch ( action.type ) {
         case COURSES_FEATURED_FETCH:
-            return Object.assign({}, state, {
+            return Object.assign([], state, {
                 loading: true,
                 error: false,
             });
@@ -19,7 +22,7 @@ const coursesReducer = ( state = [ ], action ) => {
         case COURSES_FEATURED_SUCCESS:
             // Structure array
             const courses = action.payload.map( item => {
-                return Object.assign({}, item, {
+                return Object.assign([], item, {
                     course: item.coursePublication.course
                 });
             });
@@ -29,14 +32,14 @@ const coursesReducer = ( state = [ ], action ) => {
                 error: false,
             });
         case COURSES_FEATURED_ERROR:
-            return Object.assign({}, state, {
+            return Object.assign([], state, {
                 errorMessage: action.payload,
                 loading: false,
                 error: true,
             });
         
         case COURSES_NORMAL_FETCH:
-            return Object.assign({}, state, {
+            return Object.assign([], state, {
                 loading: true,
                 error: false,
             });
@@ -47,7 +50,26 @@ const coursesReducer = ( state = [ ], action ) => {
                 error: false,
             });
         case COURSES_NORMAL_ERROR:
-            return Object.assign({}, state, {
+            return Object.assign([], state, {
+                errorMessage: action.payload,
+                loading: false,
+                error: true,
+            });
+        
+        case COURSES_SEARCH_FETCH:
+            return Object.assign([], state, {
+                loading: true,
+                error: false,
+            });
+
+        case COURSES_SEARCH_SUCCESS:
+            return Object.assign([], action.payload, {
+                loading: false,
+                error: false,
+            });
+
+        case COURSES_SEARCH_ERROR:
+            return Object.assign([], state, {
                 errorMessage: action.payload,
                 loading: false,
                 error: true,

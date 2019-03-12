@@ -11,7 +11,7 @@ export function fetchCoursesFeatured( ) {
         }));
 }
 
-export function fetchCourses(limit, page) {
-    return fetch( `${BASE_URL}search/courses/?expand=totalItems&pageIndex=${page}&pageSize=${limit}&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=27` )
+export function fetchCourses(limit, page, query = "") {
+    return fetch( `${BASE_URL}search/courses/?expand=totalItems&pageIndex=${page}&pageSize=${limit}&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=27&courseName=${query}` )
         .then( res => res.json( ) );
 }
