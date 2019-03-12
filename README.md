@@ -3,7 +3,7 @@ A baseline for server side rendering for your React application. This repo has a
 
 ## Getting started
 Clone the repo with
-```git clone https://github.com/alexnm/react-ssr```
+```git clone https://github.com/flb31/fe-ret```
 
 Install dependencies with
 ```npm i```
@@ -17,10 +17,3 @@ Now open the browser and navigate to `http://localhost:2048` and you get your se
 * We're starting the server with the `index.js` file which is in the root folder. This file loads the babel-register and sets up the babel plugins needed to run JSX and ESModules on the server.
 * The node server needs to handle the static files from the `dist` folder.
 * The entry point of the bundle is called `client.js` because it's the only part of our application that is not used for the server render.
-
-## (WIP) Navigating through the different steps
-* Base example
-* React Router
-* Redux
-* Prefetching Data
-* React Helmet
